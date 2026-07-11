@@ -31,10 +31,12 @@ jobs:
           java-version: "17"
           cache: gradle
 
-      - name: Set up Gradle 8.2.2
+      # Android Gradle Plugin is 8.2.2, but the Gradle distribution itself
+      # has no 8.2.2 release. Gradle 8.2.1 is the compatible patch release.
+      - name: Set up Gradle 8.2.1
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: "8.2.2"
+          gradle-version: "8.2.1"
 
       - name: Build debug APK
         run: gradle --no-daemon --stacktrace assembleDebug
