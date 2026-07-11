@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <application android:name=".VideoDownloaderApp" android:allowBackup="true" android:label="Video Downloader Pro" android:theme="@style/Theme.VideoDownloaderPro">
+    <application android:name=".VideoDownloaderApp" android:extractNativeLibs="true" android:requestLegacyExternalStorage="true" android:allowBackup="true" android:label="Video Downloader Pro" android:theme="@style/Theme.VideoDownloaderPro">
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
